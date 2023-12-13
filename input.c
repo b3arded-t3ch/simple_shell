@@ -17,9 +17,8 @@ char *get_input()
 	{
 		free(input);
 		input = NULL;
-		if (isatty(STDIN_FILENO))
+	/*	if (isatty(STDIN_FILENO))*/
 			printf("\n");
-		perror("$");
 		exit(EXIT_FAILURE);
 	}
 	input[ret_num - 1] = '\0';
