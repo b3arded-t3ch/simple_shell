@@ -18,7 +18,7 @@ void get_pathname(char **command)
 		new_pathname = malloc(sizeof(char) * (strlen(*command) + strlen(tok) + 2));
 		if (new_pathname == NULL)
 		{
-			fprintf(stderr, "memory allocation failure");
+			/*fprintf(stderr, "memory allocation failure");*/
 			return;
 		}
 		strcpy(new_pathname, tok);
