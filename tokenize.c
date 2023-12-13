@@ -26,7 +26,7 @@ char **tokenize(char *str, const char *delim)
 	{	arr_str = malloc(sizeof(char *) * (n_tok + 1));
 		if (arr_str == NULL)
 		{
-			fprintf(stderr, "memory allocation failure");
+		/*	fprintf(stderr, "memory allocation failure");*/
 			exit(EXIT_FAILURE);
 		}
 		token = strtok(str_cpy, delim);
