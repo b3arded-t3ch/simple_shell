@@ -17,9 +17,10 @@ char *get_input()
 	{
 		free(input);
 		input = NULL;
-	/*	if (isatty(STDIN_FILENO))*/
-		write_func("\n");
-		exit(EXIT_FAILURE);
+/*		if (isatty(STDIN_FILENO))
+			write_func("\n");*/
+		exit(0);
+	/*	return (NULL);*/
 	}
 	input[ret_num - 1] = '\0';
 	return (input);
