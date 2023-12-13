@@ -3,10 +3,11 @@
  * main - main function
  * Return: 0
  */
-int main(void)
+int main(int ac, char **av)
 {
 	char *input = NULL, **tok_ret = NULL;
 
+	(void) ac;
 	while (1)
 	{
 		input = get_input();
@@ -21,7 +22,7 @@ int main(void)
 			get_pathname(&tok_ret[0]);
 			if (tok_ret != NULL && access(tok_ret[0], X_OK) == -1)
 			{
-				perror("$");
+				perror(av[0]);
 				free_commands(tok_ret);
 				continue;
 			}
