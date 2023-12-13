@@ -10,7 +10,7 @@ char *get_input()
 	ssize_t ret_num;
 
 	if (isatty(STDIN_FILENO))
-		printf("$ ");
+		write_func("$ ");
 	fflush(stdout);
 	ret_num = getline(&input, &size, stdin);
 	if (ret_num == -1)
@@ -18,7 +18,7 @@ char *get_input()
 		free(input);
 		input = NULL;
 	/*	if (isatty(STDIN_FILENO))*/
-			printf("\n");
+		write_func("\n");
 		exit(EXIT_FAILURE);
 	}
 	input[ret_num - 1] = '\0';
