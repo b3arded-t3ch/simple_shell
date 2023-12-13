@@ -14,4 +14,5 @@ void free_commands(char **command);
 void get_pathname(char **command);
 void exit_func(char **tok_ret);
 char *get_input();
+void write_func(char *s);
 #endif
