@@ -16,10 +16,7 @@ void env_func(char **tok_ret, size_t command_count)
 				i++;
 			}
 		}
-		else
-		{
-			fprintf(stderr, "%s: %lu: not found\n", tok_ret[0],
-			command_count);
-			free_commands(tok_ret);
-		}
+		fprintf(stderr, "%s: %lu: not found\n", tok_ret[0],
+		command_count);
+		free_commands(tok_ret);
 }
