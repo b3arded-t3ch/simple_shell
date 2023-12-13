@@ -12,6 +12,7 @@ char **tokenize(char *str, const char *delim);
 void pro_exec(char **commands);
 void free_commands(char **command);
 void get_pathname(char **command);
-void exit_func(char **tok_ret, size_t command_count);
-void env_func(char **tok_ret, size_t command_count);
+void exit_func(char **tok_ret);
+char *get_input();
+/*void env_func(char **tok_ret, size_t command_count);*/
 #endif
